@@ -13,7 +13,7 @@ You will be in charge of setting up an initial demo version of the application f
 
 1. Clone this repo
 ```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-shop
+$ git clone https://github.com/pmiramonteso/Sprint-2.2.git
 ```
 
 2. Unlink your repo from the itacademy repository.
