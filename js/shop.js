@@ -99,14 +99,21 @@ function buy(id) {
         cart.push({...productoEncontrado, quantity: 1});
         console.log('Producto añadido al carrito:', productoEncontrado);
     } 
+    printCart()
     } else {
         console.log('Producto no encontrado');
     }
 }
 
-// Exercise 2
 function cleanCart() {
+    cart = [];
+    const cartList = document.getElementById('cart_list');
+    cartList.innerHTML = '';
 
+    const precioTotal = document.getElementById('total_price');
+    precioTotal.textContent = '0.00';
+
+    console.log('Carrito vaciado');
 }
 
 // Exercise 3
