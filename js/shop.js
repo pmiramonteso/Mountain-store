@@ -74,10 +74,34 @@ var cart = [];
 
 var total = 0;
 
-// Exercise 1
 function buy(id) {
-    // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cart array
+
+    let productoEncontrado = null
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].id === id) {
+            productoEncontrado = products[i];
+            break
+        }
+    }
+
+    if (productoEncontrado) {
+    let productoCarrito = null
+    for (let j = 0; j < cart.length; i++) {
+        if (cart[i].id === id) {
+            productoCarrito = cart[i];
+            break
+        }
+    }
+    if (productoCarrito) {
+        productoCarrito.quantity += 1;
+        console.log('Añadimos producto:', productoCarrito);
+    } else {
+        cart.push({...productoEncontrado, quantity: 1});
+        console.log('Producto añadido al carrito:', productoEncontrado);
+    } 
+    } else {
+        console.log('Producto no encontrado');
+    }
 }
 
 // Exercise 2
