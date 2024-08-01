@@ -119,12 +119,25 @@ function cleanCart() {
 function calculateTotal() {
     for (let i = 0; i < cart.length; i++) {
         total += cart[i].price * cart[i].quantity
-    } return total
+    } return total;
 }
 
-// Exercise 4
+
 function applyPromotionsCart() {
-    // Apply promotions to each item in the array "cart"
+    for (let i = 0; i < cart.length; i++) {
+        const item = cart[i];
+    
+    if (item.name.toLowerCase().includes('aceite') && item.quantity >= 3) {
+        item.subTotalWithDescount = (item.price * item.quantity * 0.80).toFixed(2);
+    }
+    else if (item.name.toLowerCase().includes('pasta') && item.quantity >= 10) {
+        item.subTotalWithDescount = (item.price * item.quantity * 0.70).toFixed(2);
+    } else {
+        item.subtotalWithDiscount = null;
+    }
+}
+console.log('Promociones aplicadas');
+printCart();
 }
 
 // Exercise 5
