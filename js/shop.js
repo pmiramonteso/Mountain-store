@@ -140,15 +140,32 @@ console.log('Promociones aplicadas');
 printCart();
 }
 
-// Exercise 5
 function printCart() {
-    // Fill the shopping cart modal manipulating the shopping cart dom
+    const cartList = document.getElementById('cart_list');
+    const totalPriceElement = document.getElementById('total_price');
+    cartList.innerHTML = '';
+    let total = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        const item = cart[i];
+        const subtotal = item.subtotalWithDiscount 
+                         ? parseFloat(item.subtotalWithDiscount) 
+                         : (item.price * item.quantity);
+        total += subtotal;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <th scope="row">${item.name}</th>
+            <td>$${item.price.toFixed(2)}</td>
+            <td>${item.quantity}</td>
+            <td>$${subtotal.toFixed(2)}</td>
+            <td><button onclick="removeFromCart(${item.id})" class="btn btn-danger btn-sm">Remove</button></td>
+        `;
+        cartList.appendChild(row);
+    }
+    totalPriceElement.textContent = total.toFixed(2);
 }
 
-
-// ** Nivell II **
-
-// Exercise 7
 function removeFromCart(id) {
 
 }
