@@ -529,10 +529,12 @@ progress {
   font-size: calc(1.475rem + 2.7vw);
   font-weight: 300;
   line-height: 1.2;
+  text-shadow: #000;
 }
 @media (min-width: 1200px) {
   .display-4 {
     font-size: 3.5rem;
+    text-shadow: #000;
   }
 }
 
@@ -3016,6 +3018,7 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+
 .btn:hover {
   color: #212529;
 }
@@ -10578,6 +10581,7 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 1400px) {
+
   .float-xxl-start {
     float: left !important;
   }
