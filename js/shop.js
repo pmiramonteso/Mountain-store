@@ -1,4 +1,3 @@
-// If you have time, you can move this variable "products" to a json or js file and load the data in this js. It will look more professional
 var products = [
     {
         id: 1,
@@ -64,24 +63,31 @@ var products = [
     }
 ]
 
-// => Reminder, it's extremely important that you debug your code. 
-// ** It will save you a lot of time and frustration!
-// ** You'll understand the code better than with console.log(), and you'll also find errors faster. 
-// ** Don't hesitate to seek help from your peers or your mentor if you still struggle with debugging.
-
-// Improved version of cartList. Cart is an array of products (objects), but each one has a quantity field to define its quantity, so these products are not repeated.
 var cart = [];
 
 var total = 0;
 
 function showNotification(mensaje, type) {
     const notificacion = document.getElementById('notificacion');
+
     notificacion.className = `alert alert-${type}`;
     notificacion.textContent = mensaje;
-    notificacion.classList.remove('d-none');
-    
+
+    notificacion.style.opacity = '1';
+    notificacion.style.display = 'block';
+    notificacion.style.position = 'fixed';
+    notificacion.style.top = '10px'; 
+    notificacion.style.left = '50%';
+    notificacion.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    notificacion.style.color = 'white'; 
+    notificacion.style.transform = 'translateX(-50%)';
+    notificacion.style.zIndex = '9999';
+
     setTimeout(() => {
-        notificacion.classList.add('d-none');
+        notificacion.style.opacity = '0';
+        setTimeout(() => {
+            notificacion.style.display = 'none';
+        }, 500);
     }, 3000);
 }
 
