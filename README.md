@@ -1,66 +1,27 @@
-# Sprint 2 IT Academy | Shop
+IT Mountain Shop
 
-## Introduction
+📄 Descripción: Este repositorio contiene la versión inicial de demostración de una aplicación web de e-commerce para la tienda IT Mountain Shop. La aplicación permite a los usuarios añadir productos al carrito, aplicar promociones y gestionar la compra de productos a través de una interfaz intuitiva.
 
-A company in the e-commerce sector has asked us for a web application that allows them to offer the purchase of their products through the internet.
+✨ Características: Gestión del Carrito: Permite añadir y eliminar productos del carrito, así como vaciarlo completamente. Promociones Dinámicas: Implementa promociones basadas en la cantidad de productos en el carrito. Cálculo del Importe Total: Calcula el total del importe de los productos en el carrito. Validación de Formulario de Checkout: Valida los datos del usuario en el formulario de checkout. Interfaz Dinámica: Muestra el contenido del carrito de manera dinámica en un modal.
 
-You will be in charge of setting up an initial demo version of the application for the client: management of the shopping cart and the application of the promotions on the final price. You have 1 week to finish this part of sprint (2.2).
+💻 Tecnologías Utilizadas: HTML5 CSS3 JavaScript (ES6+) Bootstrap 5
 
-<br>
+📋 Requisitos: Node.js y npm instalados en tu sistema. Puedes descargarlos desde nodejs.org.
 
-## Requirements
+🛠️ Instalación:
+✔️ Paso 1: Clona el repositorio: git clone https://github.com/pmiramonteso/Sprint-2.2.git
 
+✔️ Paso 2: Ingresa al directorio del proyecto: cd Sprint-2.2
 
-1. Clone this repo
-```bash
-$ git clone https://github.com/pmiramonteso/Sprint-2.2.git
-```
+✔️ Paso 3: Instala las dependencias: npm install
 
-2. Unlink your repo from the itacademy repository.
-(Explanation: You have to upload the code to your GitHub repository, not to the IT Academy. That's why you have to unlink your project from IT Academy GitHub with the following command)
+▶️ Ejecución: Ejecuta la aplicación con el siguiente comando: npm start
 
-```bash
-$ git remote rm origin
-```
+📦 Estructura del Proyecto:
+index.html: Página principal de la tienda.
+checkout.html: Página del formulario.
+src/shop.js: Contiene la lógica para gestionar el carrito de la compra. 
+src/checkout.js: Contiene la lógica para validar el formulario de checkout. 
+styles/style.css: Contiene los estilos personalizados para la aplicación.
 
-3. Link your repo to the repository you have to create in your github account
-(Explanation: Now your project is not linked to any remote repository. In order to upload your code, you have to link your project to the new repository created on github.com using the following command)
-
-```bash
-$ git remote add origin <your repo name!>
-```
-
-<br>
-
-## Submission
-
-1. It is necessary to upload each exercise in a separate commit. The commit name must clearly indicate its content.
-
-2. Upload the link to your GitHub repository to the virtual campus, enabling your mentor to review and provide feedback.
-
-
-
-<br>
-
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-
-## Instructions
-
-You have the following indications from the frontend manager:
-
-- You have prepared the base of the project on which you will work: https://github.com/IT-Academy-BCN/starter-code-frontend-shop
-
-- The base of the project on which you will work has already created all the files, and an initial version of the interface, so you can focus on programming the logic.
-
-- As at the moment we don't consume data from a server using an API, we will work with hardcoded data in the application. For the moment we will implement the logic using a small group of 9 products divided in 3 sections.
-
-- Except for the last level, showing the result of the functions by console is enough.
-
-- The logic to implement will be placed in the src/grocery.js and src/checkout.js files. You will see that the built in functions have already been created for you to implement them.
-
-- It is forbidden to copy the code, since this way you don't learn anything. Furthermore, as you can see, the second release of sprint 5 is a mini-level test with the mentor, in which you will have to demonstrate live that you have acquired the javascript concepts. Don't worry, if you work on the releases you won't have any problems.
+🤝 Contribuciones: Si deseas colaborar en este proyecto o informar sobre problemas, no dudes en crear un "issue" o enviar un "pull request."

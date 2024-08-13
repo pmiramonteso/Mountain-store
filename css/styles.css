@@ -11321,3 +11321,16 @@ textarea.form-control-lg {
 .shadow-text {
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-controls button {
+  margin: 0 5px;
+}
+
+.quantity-controls span {
+  margin: 0 10px;
+}

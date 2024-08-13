@@ -116,9 +116,16 @@ function buy(id) {
         }
         applyPromotionsCart();
         printCart();
+        updateCartCount();
     } else {
         showNotification('Producto no encontrado');
     }
+}
+
+function updateCartCount() {
+    const countElement = document.getElementById('count_product');
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    countElement.textContent = totalItems;
 }
 
 function cleanCart() {
@@ -174,11 +181,40 @@ function printCart() {
             <td>$${item.price.toFixed(2)}</td>
             <td>${item.quantity}</td>
             <td>$${subtotal.toFixed(2)}</td>
-            <td><button onclick="removeFromCart(${item.id})" class="btn btn-danger btn-sm">Remove</button></td>
+             <td>
+                <div class="quantity-controls">
+                    <button onclick="decreaseQuantity(${item.id})" class="btn btn-primary btn-sm">-</button>
+                    <button onclick="increaseQuantity(${item.id})" class="btn btn-primary btn-sm">+</button>
+                </div>
+            </td>
         `;
         cartList.appendChild(row);
     });
     totalPriceElement.textContent = total.toFixed(2);
+}
+
+function increaseQuantity(id) {
+    let productoCarrito = cart.find(item => item.id === id);
+    if (productoCarrito) {
+        productoCarrito.quantity += 1;
+        applyPromotionsCart();
+        printCart();
+        updateCartCount();
+    }
+}
+
+function decreaseQuantity(id) {
+    let productoCarrito = cart.find(item => item.id === id);
+    if (productoCarrito) {
+        if (productoCarrito.quantity > 1) {
+            productoCarrito.quantity -= 1;
+        } else {
+            cart = cart.filter(item => item.id !== id);
+        }
+        applyPromotionsCart();
+        printCart();
+        updateCartCount();
+    }
 }
 
 function removeFromCart(id) {
